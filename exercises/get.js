@@ -14,8 +14,10 @@ const sourceObject = {
   str: 'some text',
   log: console.log,
 }
-
+//console.log(sourceObject.num)
 // Your code :
+const get = key => sourceObject[key]
+//get(sourceObject, num)
 
 //* Begin of tests
 const assert = require('assert')

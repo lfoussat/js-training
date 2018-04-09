@@ -8,6 +8,7 @@
  */
 
 // Your code :
+const escapeStr = 'You\'ve this "beautiful" sentence you wanted with sepecials characters / and \\ and ` . ` ;) '
 
 //* Begin of tests
 const assert = require('assert')

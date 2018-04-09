@@ -9,6 +9,39 @@
  */
 
 // Your code :
+const toTotal = (acc, num) => acc + num
+const total = (arr) => arr.reduce(toTotal)
+
+const isPositive = num => num > 0 ? true : false
+
+const abs = num => num >= 0 ? num : num * -1
+
+const multiplyPositive = (a, b) => {
+  let i = 0
+  let total = 0
+  while (i < b) {
+    total = total + a
+    i++
+  }
+  return total
+}
+
+const multiplyNegToPos = (a, b) => multiplyPositive(abs(a), abs(b))
+
+const multiply = (a, b) => {
+  if (a === 0 || b === 0) {
+    return 0
+  } else if (isPositive(a) === false && isPositive(b) === false) {
+    return multiplyNegToPos(a, b)
+  } else if (isPositive(a) === false || isPositive(b) === false) {
+    const resultMultiply = multiplyNegToPos(a, b)
+    return - resultMultiply
+  }
+  return multiplyPositive(a, b)
+}
+
+
+
 
 //* Begin of tests
 const assert = require('assert')

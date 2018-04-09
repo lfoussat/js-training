@@ -11,6 +11,41 @@
 
 // Your code :
 
+
+// Your code :
+// const toTotal = (acc, num) => acc + num
+// const total = (arr) => arr.reduce(toTotal)
+//
+// const isPositive = num => num > 0
+
+const abs = Math.abs
+
+const multiplyPositive = (a, b, total) => (0 < b)
+  ?  multiplyPositive(a, b - 1, total + a)
+  : total
+
+// const multiplyPositive = (a, b, totalTable) => {
+//   let i = 0
+//   console.log(a)
+//   console.log(b)
+//   if (i < b) {
+//     totalTable.push(a)
+//     console.log(totalTable)
+//     multiplyPositive(a, b - 1, totalTable)
+//   }
+//   return total(totalTable)
+// }
+
+const multiply = (a, b) => {
+  if (a === 0 || b === 0) {
+    return 0
+  }
+  if (Math.sign(a) === Math.sign(b)) {
+    return multiplyPositive(abs(a), abs(b), 0)
+  }
+  return -multiplyPositive(abs(a), abs(b), 0)
+}
+
 //* Begin of tests
 const assert = require('assert')
 

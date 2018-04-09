@@ -8,6 +8,16 @@
 
 // Your code :
 
+const id = arg => arg
+
+//  const addition = (a, b) => a + b
+//  const result = {
+//    test: addition
+//  }
+// result.test(3,5)
+// => renvoie 8
+
+
 //* Begin of tests
 const assert = require('assert')
 
