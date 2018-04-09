@@ -15,7 +15,7 @@ const id = arg => arg
 //    test: addition
 //  }
 // result.test(3,5)
-// => renvoie 8
+// => renvoie 8  
 
 
 //* Begin of tests
