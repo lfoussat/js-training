@@ -62,9 +62,9 @@ console.log(add5('pouet'))
 const multiply = (a, b) => a * b
 // Same thing to pass 2 arguments when you call the function
 
-console.log(muliply(5, 10))
-console.log(muliply(75, 1.5))
-console.log(muliply(75, -1.5))
+console.log(multiply(5, 10))
+console.log(multiply(75, 1.5))
+console.log(multiply(75, -1.5))
 
 // Of course as functions return values
 // We can store theire return values in variables
@@ -100,15 +100,23 @@ const add10 = n => add5(add5(n))
 console.log(add10(10))
 
 // And just like that build up complexity
-const op1 = n => add10(multiply(n), add5(n))
+const op1 = n => add10(multiply(n, add5(n)))
+console.log(op1(5))
 
 /*
 
 ### Exercises proposal
 
 sub5 // substract five to the given argument and return the result
+*/
+const sub5 = n => n - 5
+
+/*
 sub // takes 2 arguments and return the substraction of the first from the second
-getFirst // return the first element of an array
+*/
+const sub = (a, b) => a - b
+
+/*getFirst // return the first element of an array
 getSecond // return the second element of an array
 getLast // return the last element of an array
 over0 // using Math.max, limit numbers to 0
@@ -118,4 +126,3 @@ clamp9000 // clamp the given value between 0 and 9000
 
 
 */
-

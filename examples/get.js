@@ -65,7 +65,7 @@ console.log(userClement['firstname'])
 console.log(userClement['address']['town'])
 console.log(userClement['address']['street'])
 console.log(userClement['address']['street']['name'])
-
+console.log(userClement.address.street.name)
 // What about arrays ?
 // well it's pretty simple, since arrays keys are numeral indexes
 // you just have to remember we start counting at 0
